@@ -1,0 +1,40 @@
+Testgetriebene Enwicklung mit C++ (gtest / gmock)
+=================================================
+
+Einführung
+    Grundlegende Begriffe
+    Test Driven Development am einfachen Beispiel
+
+Testing – Das gtest-Framework
+    Grundlagen
+    Exceptions
+    Fixtures
+    Assertions
+    Parametriesierte Tests
+
+Testing – Übungen
+    Stack
+    Trimmer
+    CSVReader
+    Statemachine
+    CommandHandling
+    SharedPtr
+
+Mocking – Das gmock-Framework
+    Assertions
+    Arrangements
+
+Mocking – Übungen
+    AcountService
+    GroupChangeReader
+
+Übungen zum Test Driven Development
+    Parser für numerische Ausdrücke
+    Entwurf logischer Schaltungen
+
+Übung zum Thema Refactoring
+
+Testen Datenbank-basierter Anwendungen
+
+
+
