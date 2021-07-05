@@ -14,6 +14,20 @@ const int validValue = 1;
 //	EXPECT_TRUE(true);
 //}
 
+
+TEST_F(stapel_test, ctor_overload) {
+
+	// Arrange
+	stapel other{50};
+	// Act
+
+	EXPECT_EQ(50 ,other.get_size());
+
+	// Assertion	
+
+	EXPECT_TRUE(other.is_empty());
+	EXPECT_FALSE(other.is_full());
+}
 TEST_F(stapel_test, is_empty_empty_stack_returns_true) {
 
 	// Arrange

@@ -11,5 +11,6 @@
     &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::stapel_test.push_fill_up_to_limit_no_exception_thrown&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::stapel_test.push_overflow_throws_stapelexception&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::stapel_test.push_overflow_throws_stapelexception_and_error_message_is_overflow&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::stapel_test.ctor_overload&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
