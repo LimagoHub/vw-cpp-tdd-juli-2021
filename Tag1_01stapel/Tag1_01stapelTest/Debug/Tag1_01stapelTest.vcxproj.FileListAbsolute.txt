@@ -1,0 +1,1 @@
+C:\Users\JoachimWagner\git\vw-cpp-tdd-juli-2021\Tag1_01stapel\Tag1_01stapelTest\Debug\Tag1_01stapelTest.vcxproj.CopyComplete

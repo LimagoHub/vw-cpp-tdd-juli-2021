@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Executable>C:\Users\JoachimWagner\git\vw-cpp-tdd-juli-2021\Tag1_01stapel\Debug\Tag1_01stapelTest.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="TestCaseName.TestName" Duration="1" />
+    <TestDuration Test="stapel_test.is_empty_empty_stack_returns_true" Duration="1" />
+    <TestDuration Test="stapel_test.is_empty_not_empty_stack_returns_false" Duration="1" />
+    <TestDuration Test="stapel_test.is_empty_stack_empty_again_returns_true" Duration="1" />
+    <TestDuration Test="stapel_test.push_fill_up_to_limit_no_exception_thrown" Duration="1" />
+    <TestDuration Test="stapel_test.push_overflow_throws_stapelexception" Duration="1" />
+    <TestDuration Test="stapel_test.push_overflow_throws_stapelexception_and_error_message_is_overflow" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>

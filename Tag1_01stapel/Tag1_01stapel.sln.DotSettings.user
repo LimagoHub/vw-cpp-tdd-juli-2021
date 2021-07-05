@@ -1,0 +1,15 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ae2c0beb_002D0e4f_002D49cf_002Da1b1_002Defe4d3d0610d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestName" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::TestCaseName.TestName&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::TestCaseNamex.TestNamex&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::stapel_test.is_empty_empty_stack_return_true&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::stapel_test.GivenAnEmptyStackWhen_is_empty_CalledThenReturnsTrue&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::stapel_test.is_empty_empty_stack_returns_true&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::stapel_test.is_empty_not_empty_stack_returns_false&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::stapel_test.is_empty_stack_empty_again_returns_true&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::stapel_test.push_fill_up_to_limit_no_exception_thrown&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::stapel_test.push_overflow_throws_stapelexception&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::DABD92EE-8B89-41DD-A1EA-999EF171314A::.NETFramework,Version=v4.0::stapel_test.push_overflow_throws_stapelexception_and_error_message_is_overflow&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
