@@ -1,0 +1,1 @@
+C:\Users\JoachimWagner\git\vw-cpp-tdd-juli-2021\Tag1_02Tiere\Tag1_02TiereTest\Debug\Tag1_02TiereTest.vcxproj.CopyComplete
