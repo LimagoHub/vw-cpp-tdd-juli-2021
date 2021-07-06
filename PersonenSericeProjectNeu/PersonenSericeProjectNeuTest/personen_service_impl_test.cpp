@@ -50,9 +50,12 @@ TEST_F(personen_service_impl_test, speichern_unexpected_item_is_thrown_throws_pe
 
 TEST_F(personen_service_impl_test, speichern_happy_day_person_is_passed_to_repo)
 {
+	::testing::InSequence s;
+	
 	person valid_person;
 	valid_person.set_vorname("Max");
 	valid_person.set_nachname("Mustermann");
+	
 	EXPECT_CALL(unsympathen_service_mock_, is_unsympath("Max")).WillOnce(Return(false));
 	EXPECT_CALL(personen_reporitory_mock_, insert(Eq(valid_person))).Times(1);
 
