@@ -1,0 +1,8 @@
+﻿  pch.cpp
+  person.cpp
+C:\Users\JoachimWagner\git\vw-cpp-tdd-juli-2021\PersonenSericeProjectNeu\PersonenSericeProjectNeu\person.cpp(6,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  PersonenSericeProjectNeu.cpp
+  personen_service_exception.cpp
+C:\Users\JoachimWagner\git\vw-cpp-tdd-juli-2021\PersonenSericeProjectNeu\PersonenSericeProjectNeu\personen_service_exception.cpp(2,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  personen_service_impl.cpp
+C:\Users\JoachimWagner\git\vw-cpp-tdd-juli-2021\PersonenSericeProjectNeu\PersonenSericeProjectNeu\personen_service_impl.cpp(21,1): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?

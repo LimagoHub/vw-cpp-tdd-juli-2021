@@ -1,0 +1,9 @@
+﻿  pch.cpp
+  personen_service_impl_test.cpp
+  test.cpp
+  Code wird generiert...
+  gtest-all.cc
+  gmock-all.cc
+  Code wird generiert...
+Tag2_01PersonenServiceProjekt.lib(person.obj) : warning LNK4075: /EDITANDCONTINUE wird aufgrund der Angabe von /SAFESEH ignoriert.
+  Tag2_01PersonenServiceProjektTest.vcxproj -> C:\Users\JoachimWagner\git\vw-cpp-tdd-juli-2021\Tag2_01PersonenServiceProjekt\Debug\Tag2_01PersonenServiceProjektTest.exe
