@@ -35,6 +35,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\PersonenSericeProjectNeu\PersonenSericeProjectNeuTest\personen_repository_mock.h" />
     <ClInclude Include="..\..\PersonenSericeProjectNeu\PersonenSericeProjectNeuTest\personen_service_impl_test.h" />
+    <ClInclude Include="unsympathen_service_mock.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>

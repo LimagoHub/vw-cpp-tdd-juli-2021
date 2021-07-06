@@ -1,18 +1,21 @@
 #pragma once
 #include "personen_repository.h"
 #include "personen_service.h"
+#include "unsympathen_service.h"
+
 class personen_service_impl :
     public personen_service
 {
 private :
 	personen_repository& personen_repository_;
+	unsympathen_service& unsympathen_service_;
 	void speichern_impl(person& p);
 	void check_person(person& p);
 	void validate(person& p);
 	void business_check(person& p);
 public:
 
-	personen_service_impl(personen_repository& personen_repository);
+	personen_service_impl(personen_repository& personen_repository, unsympathen_service& unsympathen_service);
 
 
 	/*

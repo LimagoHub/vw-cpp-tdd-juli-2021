@@ -25,12 +25,12 @@ void personen_service_impl::validate(person& p)
 
 void personen_service_impl::business_check(person& p)
 {
-	if (p.get_vorname() == "Attila")
+	if (unsympathen_service_.is_unsympath(p.get_vorname()))
 		throw personen_service_exception("Unerwünschte Peron!");
 }
 
-personen_service_impl::personen_service_impl(personen_repository& personen_repository)
-	: personen_repository_(personen_repository)
+personen_service_impl::personen_service_impl(personen_repository& personen_repository,unsympathen_service& unsympathen_service)
+	: personen_repository_(personen_repository),unsympathen_service_(unsympathen_service)
 {
 }
 

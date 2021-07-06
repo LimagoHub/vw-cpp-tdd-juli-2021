@@ -4,7 +4,7 @@
   <TestDurations>
     <TestDuration Test="personen_service_impl_test.speichern_firstname_too_short_throws_personenserviceexception" Duration="1" />
     <TestDuration Test="personen_service_impl_test.speichern_lastname_too_short_throws_personenserviceexception" Duration="1" />
-    <TestDuration Test="personen_service_impl_test.speichern_vorname_attila_throws_personenserviceexception" Duration="1" />
+    <TestDuration Test="personen_service_impl_test.speichern_antipath_throws_personenserviceexception" Duration="1" />
     <TestDuration Test="personen_service_impl_test.speichern_repository_exception_throws_personenserviceexception" Duration="1" />
     <TestDuration Test="personen_service_impl_test.speichern_unexpected_item_is_thrown_throws_personenserviceexception" Duration="1" />
     <TestDuration Test="personen_service_impl_test.speichern_happy_day_person_is_passed_to_repo" Duration="1" />

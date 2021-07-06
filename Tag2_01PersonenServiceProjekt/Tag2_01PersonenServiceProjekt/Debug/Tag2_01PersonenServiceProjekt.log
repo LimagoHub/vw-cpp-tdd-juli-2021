@@ -1,8 +1,3 @@
-﻿  pch.cpp
-  person.cpp
-  personen_service_exception.cpp
-  personen_service_impl.cpp
+﻿  personen_service_impl.cpp
 C:\Users\JoachimWagner\git\vw-cpp-tdd-juli-2021\Tag2_01PersonenServiceProjekt\Tag2_01PersonenServiceProjekt\personen_service_impl.cpp(44,37): warning C4101: "ex": Unreferenzierte lokale Variable
-  Tag2_01PersonenServiceProjekt.cpp
-  Code wird generiert...
   Tag2_01PersonenServiceProjekt.vcxproj -> C:\Users\JoachimWagner\git\vw-cpp-tdd-juli-2021\Tag2_01PersonenServiceProjekt\Debug\Tag2_01PersonenServiceProjekt.lib

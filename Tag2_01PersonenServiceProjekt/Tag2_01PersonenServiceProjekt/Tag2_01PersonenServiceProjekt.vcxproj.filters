@@ -13,38 +13,38 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Headerdateien\Persitence">
+      <UniqueIdentifier>{0a880902-9c76-4e71-84a8-3d94704062a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\Service">
+      <UniqueIdentifier>{8d0b1372-de70-45d8-8046-c7d84b353134}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="person.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="personen_repository.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="personen_service.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="personen_service_exception.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="personen_service_impl.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\Persitence</Filter>
     </ClInclude>
     <ClInclude Include="repository_exception.h">
+      <Filter>Headerdateien\Persitence</Filter>
+    </ClInclude>
+    <ClInclude Include="person.h">
+      <Filter>Headerdateien\Persitence</Filter>
+    </ClInclude>
+    <ClInclude Include="personen_service.h">
+      <Filter>Headerdateien\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="personen_service_exception.h">
+      <Filter>Headerdateien\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="personen_service_impl.h">
+      <Filter>Headerdateien\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="unsympathen_service.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tag2_01PersonenServiceProjekt.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="pch.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="person.cpp">

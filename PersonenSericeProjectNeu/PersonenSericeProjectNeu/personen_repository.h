@@ -6,6 +6,7 @@
 
 class personen_repository
 {
+public:
 	virtual void insert(const person& person) = 0;
 	virtual bool update(const person& person) = 0;
 	virtual bool remove(const person& person) = 0;
