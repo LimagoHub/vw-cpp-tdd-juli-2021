@@ -19,6 +19,7 @@ namespace vw
 			{
 				human_turn();
 				computer_turn();
+				
 			}
 
 
