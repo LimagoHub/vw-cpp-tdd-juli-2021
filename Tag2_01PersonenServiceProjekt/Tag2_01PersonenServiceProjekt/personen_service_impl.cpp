@@ -35,7 +35,7 @@ personen_service_impl::personen_service_impl(personen_repository& personen_repos
 }
 
 
-void personen_service_impl::speichern(person& p)
+void personen_service_impl::speichern(person& p) 
 {
 	try
 	{
@@ -57,6 +57,10 @@ void personen_service_impl::speichern(person& p)
 
 void personen_service_impl::speichern(std::string vorname, std::string nachname)
 {
+	person my_person;
+	my_person.set_vorname(vorname);
+	my_person.set_nachname(nachname);
+	speichern( my_person);
 }
 
 std::optional<person> personen_service_impl::findeEinzelnePerson(std::string id)

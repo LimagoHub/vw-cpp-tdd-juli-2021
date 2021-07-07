@@ -50,14 +50,30 @@ TEST_F(personen_service_impl_test, speichern_unexpected_item_is_thrown_throws_pe
 
 TEST_F(personen_service_impl_test, speichern_happy_day_person_is_passed_to_repo)
 {
-	::testing::InSequence s;
+	InSequence s;
 	
 	person valid_person;
 	valid_person.set_vorname("Max");
 	valid_person.set_nachname("Mustermann");
 	
-	EXPECT_CALL(unsympathen_service_mock_, is_unsympath("Max")).WillOnce(Return(false));
+	EXPECT_CALL(unsympathen_service_mock_, is_unsympath(Eq("Max"))).WillOnce(Return(false));
 	EXPECT_CALL(personen_reporitory_mock_, insert(Eq(valid_person))).Times(1);
-
+	
 	object_under_test.speichern(valid_person);
+}
+
+TEST_F(personen_service_impl_test, speichern_overloaded_happy_day_person_is_passed_to_repo)
+{
+	InSequence s;
+
+	person valid_person;
+	
+
+	EXPECT_CALL(unsympathen_service_mock_, is_unsympath("Max")).WillOnce(Return(false));
+	EXPECT_CALL(personen_reporitory_mock_, insert(_)).Times(1).WillOnce( DoAll(SaveArg<0>(&valid_person)));
+
+	object_under_test.speichern("Max","Mustermann");
+
+	EXPECT_EQ("Max", valid_person.get_vorname());
+	EXPECT_EQ("Mustermann", valid_person.get_nachname());
 }
