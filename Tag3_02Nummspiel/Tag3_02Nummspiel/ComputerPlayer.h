@@ -13,7 +13,7 @@ public:
 	}
 
 
-	int do_turn(int stones) override
+	int do_turn(const int & stones) const override
 	{
 		int zug = zuege[stones % 4];
 		std::cout << "Computer nimmt " << zug << " Steine." << std::endl;

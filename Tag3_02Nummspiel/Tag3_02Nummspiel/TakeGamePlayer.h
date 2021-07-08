@@ -1,11 +1,13 @@
 #pragma once
 #include <string>
 
-class TakeGamePlayer
+#include "GamePlayer.h"
+
+class TakeGamePlayer: public GamePlayer<int, int>
 {
 public:
-	virtual std::string get_name() = 0;
-	virtual int do_turn(int stones) = 0;
+	std::string get_name() const override = 0;
+	int do_turn(const int & stones) const override = 0;
 	
 };
 

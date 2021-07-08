@@ -12,7 +12,7 @@ public:
 	}
 
 
-	int do_turn(int stones) override
+	int do_turn(const int & stones) const override
 	{
 		int zug;
 		std::cout << "Es gibt " << stones << " Steine. Bitte nehmen Sie 1,2 oder 3: ";

@@ -4,7 +4,7 @@
 
 
 
-
+#include "AbstractGame.h"
 #include "Game.h"
 #include "TakeGamePlayer.h"
 
@@ -13,8 +13,7 @@ namespace vw
 	namespace games
 	{
 		class TakeGameImpl :
-			public Game
-		{
+			public AbstractGame<int,int>{
 		private:
 
 			std::vector<std::reference_wrapper<TakeGamePlayer>> players;
@@ -23,14 +22,7 @@ namespace vw
 			int zug;
 			TakeGamePlayer* player;
 			
-			void execute_turns()  // Integration
-			{
-				for(auto &player: players)
-				{
-					prepare_and_execute_single_turn(player);
-				}
-				
-			}
+			
 
 			void prepare_and_execute_single_turn(TakeGamePlayer & player_)
 			{
@@ -92,7 +84,7 @@ namespace vw
 			stones_ -= zug;
 		}
 		protected:
-			bool is_game_over() const // operation
+			bool is_game_over() const override// operation
 			{
 				return stones_ < 1 || players.empty();
 			}
@@ -105,11 +97,7 @@ namespace vw
 			}
 
 
-			void play() override
-			{
-				while (! is_game_over())	execute_turns();
-				
-			}
+			
 
 			void add_player(TakeGamePlayer &player)
 			{

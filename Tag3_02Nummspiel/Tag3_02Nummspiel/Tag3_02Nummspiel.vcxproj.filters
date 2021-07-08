@@ -22,6 +22,9 @@
     <Filter Include="Headerdateien\takegame\Players">
       <UniqueIdentifier>{f2db617f-cdb8-4ef2-85ad-43b4990a564b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headerdateien\games\Players">
+      <UniqueIdentifier>{0ca6874f-6131-4053-a084-20ef4d0d58b3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tag3_02Nummspiel.cpp">
@@ -67,6 +70,12 @@
     </ClInclude>
     <ClInclude Include="HumanPlayer.h">
       <Filter>Headerdateien\takegame\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePlayer.h">
+      <Filter>Headerdateien\games\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractGame.h">
+      <Filter>Headerdateien\games</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
