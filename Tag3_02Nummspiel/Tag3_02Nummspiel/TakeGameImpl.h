@@ -22,8 +22,10 @@ namespace vw
 			
 			void execute_turns()  // Integration
 			{
-				human_turn();
-				computer_turn();
+				for(auto &player: players)
+				{
+					
+				}
 				
 			}
 
@@ -95,6 +97,14 @@ namespace vw
 			void add_player(TakeGamePlayer &player)
 			{
 				players.push_back(std::ref(player));
+				
+			}
+
+			void remove_player(TakeGamePlayer& player)
+			{
+				auto iterator =std::remove_if(players.begin(), players.end(), [&](TakeGamePlayer& storedPlayer) {return storedPlayer.get_name() == player.get_name(); });
+				players.erase(iterator, players.end());
+
 			}
 		};
 	}
