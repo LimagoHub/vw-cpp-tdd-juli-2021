@@ -19,6 +19,9 @@
     <Filter Include="Headerdateien\takegame">
       <UniqueIdentifier>{c95d1eba-04f4-40cd-8007-32fc8756db69}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headerdateien\takegame\Players">
+      <UniqueIdentifier>{f2db617f-cdb8-4ef2-85ad-43b4990a564b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tag3_02Nummspiel.cpp">
@@ -28,6 +31,18 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="TakeGameImpl.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="TakeGamePlayer.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="HumanPlayer.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputerPlayer.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractTakeGamePlayer.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -40,6 +55,18 @@
     </ClInclude>
     <ClInclude Include="TakeGameImpl.h">
       <Filter>Headerdateien\takegame</Filter>
+    </ClInclude>
+    <ClInclude Include="TakeGamePlayer.h">
+      <Filter>Headerdateien\takegame\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerPlayer.h">
+      <Filter>Headerdateien\takegame\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractTakeGamePlayer.h">
+      <Filter>Headerdateien\takegame\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="HumanPlayer.h">
+      <Filter>Headerdateien\takegame\Players</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

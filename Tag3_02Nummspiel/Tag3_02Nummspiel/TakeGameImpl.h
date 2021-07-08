@@ -1,7 +1,10 @@
 #pragma once
 #include <iostream>
+#include <vector>
+
 
 #include "Game.h"
+#include "TakeGamePlayer.h"
 
 namespace vw
 {
@@ -11,21 +14,23 @@ namespace vw
 			public Game
 		{
 		private:
-			int stones_;
-			bool gameover_;
 
+			std::vector<std::reference_wrapper<TakeGamePlayer>> players;
 			
-			void execute_turns()
+			int stones_;
+			int zug;
+			
+			void execute_turns()  // Integration
 			{
 				human_turn();
 				computer_turn();
 				
 			}
 
-
 			void human_turn()
 			{
-				int zug;
+				if (is_game_over()) return;
+
 
 				while (true)
 				{
@@ -34,42 +39,62 @@ namespace vw
 					if (zug >= 1 && zug <= 3) break;
 					std::cout << "ungültiger Zug " << std::endl;
 				}
-				stones_ -= zug;
+				terminate_turn("human");
 			}
 
 			void computer_turn()
 			{
-				const int zuege[] = {3, 1, 1, 2};
-				if (stones_ == 1)
-				{
-					std::cout << "Du hast nur Glueck gehabt " << std::endl;
-					gameover_ = true;
-					return;
-				}
+				if (is_game_over()) return;
 
-				if (stones_ <= 0)
-				{
-					std::cout << "Du Loser! " << std::endl;
-					gameover_ = true;
-					return;
-				}
-				int zug = zuege[stones_ % 4];
+				const int zuege[] = { 3, 1, 1, 2 };
+				zug = zuege[stones_ % 4];
 				std::cout << "Computer nimmt " << zug << " Steine." << std::endl;
-				stones_ -= zug;
+
+				terminate_turn("Computer");
+			}
+			
+			
+
+			void terminate_turn(std::string player) // Integration
+			{
+				update_scene();
+				check_losing(player);
+			}
+
+			
+
+		void check_losing(std::string player) const
+		{
+			if (is_game_over()) std::cout << player << " hat verloren." << std::endl;
+		}
+
+		void update_scene() // operation
+		{
+			stones_ -= zug;
+		}
+		protected:
+			bool is_game_over() const // operation
+			{
+				return stones_ < 1;
 			}
 
 		public:
 			TakeGameImpl()
 			{
 				stones_ = 23;
-				gameover_ = false;
+				
 			}
 
 
 			void play() override
 			{
-				while (! gameover_)	execute_turns();
+				while (! is_game_over())	execute_turns();
 				
+			}
+
+			void add_player(TakeGamePlayer &player)
+			{
+				players.push_back(std::ref(player));
 			}
 		};
 	}
