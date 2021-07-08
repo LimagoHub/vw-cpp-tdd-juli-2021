@@ -3,6 +3,8 @@
 #include <vector>
 
 
+
+
 #include "Game.h"
 #include "TakeGamePlayer.h"
 
@@ -19,55 +21,70 @@ namespace vw
 			
 			int stones_;
 			int zug;
+			TakeGamePlayer* player;
 			
 			void execute_turns()  // Integration
 			{
 				for(auto &player: players)
 				{
-					
+					prepare_and_execute_single_turn(player);
 				}
 				
 			}
 
-			void human_turn()
+			void prepare_and_execute_single_turn(TakeGamePlayer & player_)
+			{
+				player = &player_;
+				execute_single_turn();
+			}
+
+			
+
+			void execute_single_turn()
 			{
 				if (is_game_over()) return;
+				invoke_players_turn();
+				terminate_turn();
+			}
 
+			
+			
+			void invoke_players_turn()
+			{
+				// while (actual_turn_is_invalid(player))
+				// {
+				// 	std::cout << "ungültiger Zug " << std::endl;
+				// }
 
-				while (true)
+				do
 				{
-					std::cout << "Es gibt " << stones_ << " Steine. Bitte nehmen Sie 1,2 oder 3: ";
-					std::cin >> zug;
-					if (zug >= 1 && zug <= 3) break;
-					std::cout << "ungültiger Zug " << std::endl;
-				}
-				terminate_turn("human");
+					zug = player->do_turn(stones_);
+				} while (is_actual_invalid());
 			}
 
-			void computer_turn()
+			bool is_actual_invalid() // Command
 			{
-				if (is_game_over()) return;
-
-				const int zuege[] = { 3, 1, 1, 2 };
-				zug = zuege[stones_ % 4];
-				std::cout << "Computer nimmt " << zug << " Steine." << std::endl;
-
-				terminate_turn("Computer");
+				if (is_turn_valid()) return false;
+				std::cout << "Ungültiger Zug" << std::endl;
+				return true;
 			}
-			
-			
 
-			void terminate_turn(std::string player) // Integration
+			bool is_turn_valid() // query
+			{
+				return zug >= 1 && zug <= 3;
+			}
+
+			void terminate_turn() // Integration
 			{
 				update_scene();
-				check_losing(player);
+				check_losing();
 			}
 
 			
 
-		void check_losing(std::string player) const
+		void check_losing() const
 		{
-			if (is_game_over()) std::cout << player << " hat verloren." << std::endl;
+			if (is_game_over()) std::cout << player->get_name() << " hat verloren." << std::endl;
 		}
 
 		void update_scene() // operation
@@ -77,7 +94,7 @@ namespace vw
 		protected:
 			bool is_game_over() const // operation
 			{
-				return stones_ < 1;
+				return stones_ < 1 || players.empty();
 			}
 
 		public:

@@ -5,12 +5,19 @@
 
 
 
+#include "ComputerPlayer.h"
 #include "GameClient.h"
+#include "HumanPlayer.h"
 #include "TakeGameImpl.h"
 
 int main()
 {
 	vw::games::TakeGameImpl game;
+	ComputerPlayer cp{ "Maschine" };
+	HumanPlayer hp{ "Mensch" };
+	game.add_player(hp);
+	game.add_player(cp);
+
 	client::GameClient client(game);
 	client.go();
 }
