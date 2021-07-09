@@ -4,21 +4,23 @@
 #include <iostream>
 
 
-
 #include "ComputerPlayer.h"
+#include "ConsolenWriter.h"
 #include "GameClient.h"
 #include "HumanPlayer.h"
 #include "TakeGameImpl.h"
 
 int main()
 {
-	vw::games::TakeGameImpl game;
-	ComputerPlayer cp{ "Maschine" };
-	HumanPlayer hp{ "Mensch" };
-	game.add_player(hp);
-	game.add_player(cp);
+	ConsolenWriter console_writer;
+	vw::games::TakeGameImpl game{console_writer};
+
+	auto player1 = HumanPlayer{"Spieler"};
+	auto player2 = ComputerPlayer{"Computer"};
+
+	game.add_player(player1);
+	game.add_player(player2);
 
 	client::GameClient client(game);
 	client.go();
 }
-

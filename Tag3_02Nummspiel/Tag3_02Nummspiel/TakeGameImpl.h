@@ -1,115 +1,42 @@
 #pragma once
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 
 
 #include "AbstractGame.h"
 #include "Game.h"
 #include "TakeGamePlayer.h"
+#include "HumanPlayer.h"
+#include "ComputerPlayer.h"
 
 namespace vw
 {
 	namespace games
 	{
 		class TakeGameImpl :
-			public AbstractGame<int,int>{
-		private:
-
-			std::vector<std::reference_wrapper<TakeGamePlayer>> players;
-			
-			int stones_;
-			int zug;
-			TakeGamePlayer* player;
-			
-			
-
-			void prepare_and_execute_single_turn(TakeGamePlayer & player_)
-			{
-				player = &player_;
-				execute_single_turn();
-			}
-
-			
-
-			void execute_single_turn()
-			{
-				if (is_game_over()) return;
-				invoke_players_turn();
-				terminate_turn();
-			}
-
-			
-			
-			void invoke_players_turn()
-			{
-				// while (actual_turn_is_invalid(player))
-				// {
-				// 	std::cout << "ungültiger Zug " << std::endl;
-				// }
-
-				do
-				{
-					zug = player->do_turn(stones_);
-				} while (is_actual_invalid());
-			}
-
-			bool is_actual_invalid() // Command
-			{
-				if (is_turn_valid()) return false;
-				std::cout << "Ungültiger Zug" << std::endl;
-				return true;
-			}
-
-			bool is_turn_valid() // query
-			{
-				return zug >= 1 && zug <= 3;
-			}
-
-			void terminate_turn() // Integration
-			{
-				update_scene();
-				check_losing();
-			}
-
-			
-
-		void check_losing() const
+			public AbstractGame<int, int>
 		{
-			if (is_game_over()) std::cout << player->get_name() << " hat verloren." << std::endl;
-		}
-
-		void update_scene() // operation
-		{
-			stones_ -= zug;
-		}
 		protected:
-			bool is_game_over() const override// operation
+			bool is_turn_valid() override // operation
 			{
-				return stones_ < 1 || players.empty();
+				return (get_active_turn() >= 1 && get_active_turn() <= 3);
+			}
+
+			bool is_game_over() const override // operation
+			{
+				return scene_ < 1 || get_players().empty();
+			}
+
+			void update_scene() override // operation
+			{
+				scene_ -= get_active_turn();
 			}
 
 		public:
-			TakeGameImpl()
+			TakeGameImpl(Writer & writer):AbstractGame<int, int>(writer)
 			{
-				stones_ = 23;
-				
-			}
-
-
-			
-
-			void add_player(TakeGamePlayer &player)
-			{
-				players.push_back(std::ref(player));
-				
-			}
-
-			void remove_player(TakeGamePlayer& player)
-			{
-				auto iterator =std::remove_if(players.begin(), players.end(), [&](TakeGamePlayer& storedPlayer) {return storedPlayer.get_name() == player.get_name(); });
-				players.erase(iterator, players.end());
-
+				scene_ = 23;
 			}
 		};
 	}
