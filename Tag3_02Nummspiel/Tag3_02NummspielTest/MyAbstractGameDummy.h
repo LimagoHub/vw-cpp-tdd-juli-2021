@@ -15,7 +15,7 @@ public:
 	}
 
 protected:
-	bool is_game_over() const override { return game_over; }
+	[[nodiscard]] bool is_game_over() const override { return game_over; }
 
 	void update_scene() override {}
 

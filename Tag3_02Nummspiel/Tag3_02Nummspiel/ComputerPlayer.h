@@ -11,7 +11,7 @@ public:
 		: AbstractTakeGamePlayer(name)
 	{
 	}
-
+	
 
 	int do_turn(const int & stones) const override
 	{
