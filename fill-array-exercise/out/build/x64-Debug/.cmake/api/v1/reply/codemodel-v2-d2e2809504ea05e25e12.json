@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.2"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "cpp_clean_code_training",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cpp_clean_code_training.e.random_vector::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cpp_clean_code_training.e.random_vector-Debug-41a75da7e93fafe94ead.json",
+					"name" : "cpp_clean_code_training.e.random_vector",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cpp_clean_code_training.o::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cpp_clean_code_training.o-Debug-df1b14115f53c680139a.json",
+					"name" : "cpp_clean_code_training.o",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/JoachimWagner/git/atlas-clean-code-februar-2022/fill-array-exercise/out/build/x64-Debug",
+		"source" : "C:/Users/JoachimWagner/git/atlas-clean-code-februar-2022/fill-array-exercise"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}
